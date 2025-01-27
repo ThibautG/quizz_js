@@ -20,11 +20,13 @@ const btn18 = document.getElementById("btn-18");
 const btn19 = document.getElementById("btn-19");
 const btn20 = document.getElementById("btn-20");
 
+let compt = 0;
 
 
 // appliquer la couleur de fond correspondant à la réponse quand on clique dessus sur le bouton
 btn1.addEventListener("click", () => {
     btn1.style.background = "green";
+    compt += 1;
 })
 btn2.addEventListener("click", () => {
     btn2.style.background = "red";
@@ -34,15 +36,18 @@ btn3.addEventListener("click", () => {
 })
 btn4.addEventListener("click", () => {
     btn4.style.background = "green";
+    compt += 1;
 })
 btn5.addEventListener("click", () => {
     btn5.style.background = "green";
+    compt += 1;
 })
 btn6.addEventListener("click", () => {
     btn6.style.background = "red";
 })
 btn7.addEventListener("click", () => {
     btn7.style.background = "green";
+    compt += 1;
 })
 btn8.addEventListener("click", () => {
     btn8.style.background = "red";
@@ -52,15 +57,18 @@ btn9.addEventListener("click", () => {
 })
 btn10.addEventListener("click", () => {
     btn10.style.background = "green";
+    compt += 1;
 })
 btn11.addEventListener("click", () => {
     btn11.style.background = "green";
+    compt += 1;
 })
 btn12.addEventListener("click", () => {
     btn12.style.background = "red";
 })
 btn13.addEventListener("click", () => {
     btn13.style.background = "green";
+    compt += 1;
 })
 btn14.addEventListener("click", () => {
     btn14.style.background = "red";
@@ -70,17 +78,24 @@ btn15.addEventListener("click", () => {
 })
 btn16.addEventListener("click", () => {
     btn16.style.background = "green";
+    compt += 1;
 })
 btn17.addEventListener("click", () => {
     btn17.style.background = "red";
 })
 btn18.addEventListener("click", () => {
     btn18.style.background = "green";
+    compt += 1;
 })
 btn19.addEventListener("click", () => {
     btn19.style.background = "green";
+    compt += 1;
+    alert(`Vous avez eu ${compt} bonnes réponses sur 10`);
 })
 btn20.addEventListener("click", () => {
     btn20.style.background = "red";
+    alert(`Vous avez eu ${compt} bonnes réponses sur 10`);
 })
 
+
+// afficher le compteur de bonnes réponses => directement à l'intérieur des derniers addEventListener

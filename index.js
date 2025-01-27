@@ -20,12 +20,14 @@ const btn18 = document.getElementById("btn-18");
 const btn19 = document.getElementById("btn-19");
 const btn20 = document.getElementById("btn-20");
 
+// on déclare un compteur initialisé à 0 pour les bonnes réponses
 let compt = 0;
 
 
-// appliquer la couleur de fond correspondant à la réponse quand on clique dessus sur le bouton
+// appliquer la couleur de fond correspondant à la réponse quand on clique sur le bouton
 btn1.addEventListener("click", () => {
     btn1.style.background = "green";
+    // on incrémente le compteur de 1 quand on valide la bonne réponse
     compt += 1;
 })
 btn2.addEventListener("click", () => {
@@ -90,12 +92,12 @@ btn18.addEventListener("click", () => {
 btn19.addEventListener("click", () => {
     btn19.style.background = "green";
     compt += 1;
-    alert(`Vous avez eu ${compt} bonnes réponses sur 10`);
+    // on insère le compteur en HTML via JS dans une div #message
+    document.getElementById("message").innerHTML = `
+    <h3>Vous avez eu ${compt} bonnes réponses sur 10</h3>`;
 })
 btn20.addEventListener("click", () => {
     btn20.style.background = "red";
-    alert(`Vous avez eu ${compt} bonnes réponses sur 10`);
+    document.getElementById("message").innerHTML = `
+    <h3>Vous avez eu ${compt} bonnes réponses sur 10</h3>`;
 })
-
-
-// afficher le compteur de bonnes réponses => directement à l'intérieur des derniers addEventListener
